@@ -1,0 +1,35 @@
+.gmr-notification {
+  background-color: #dff0d8;
+  color: #000;
+  font-family:inter;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: inline-flex;
+}
+.gmr-notification div.marquee:hover {
+  animation-play-state: paused;
+}
+.gmr-notification div.marquee {
+  white-space: nowrap;
+  display: flex;
+  flex-basis: 100%;
+  padding-left: 100%;
+  animation: marquee 35s linear infinite;
+  -moz-animation: marquee 35s linear infinite;
+    animation-play-state: running;
+  -webkit-animation: marquee 15s linear infinite;
+    animation-play-state: running;
+}
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
